@@ -4,11 +4,12 @@ public class FizzBuzzShould
 {
 
 	[Fact]
-	public void FizzBuzz_InputIs1_Return1()
+	public void FizzBuzz_InputIsNoMultipleOf3Neither5_ReturnSameNumber()
 	{
 		var fizzBuzz = new FizzBuzz();
-		String result = fizzBuzz.Execute(1);
 
-		Assert.Equal("1", result);
+		Assert.Equal("1", fizzBuzz.Execute(1));
+		Assert.Equal("2", fizzBuzz.Execute(2));
+		Assert.Equal("4", fizzBuzz.Execute(4));
 	}
 }

@@ -3,6 +3,6 @@ public class FizzBuzz
 {
 	public string Execute(int input)
 	{
-		return "1";
+		return input.ToString();
 	}
 }
