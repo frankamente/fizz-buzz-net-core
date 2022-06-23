@@ -22,4 +22,14 @@ public class FizzBuzzShould
 		Assert.Equal("Fizz", fizzBuzz.Execute(6));
 		Assert.Equal("Fizz", fizzBuzz.Execute(9));
 	}
+
+	[Fact]
+	public void FizzBuzz_InputIsMultipleOf5_ReturnBuzz()
+	{
+		var fizzBuzz = new FizzBuzz();
+
+		Assert.Equal("Buzz", fizzBuzz.Execute(5));
+		Assert.Equal("Buzz", fizzBuzz.Execute(10));
+		Assert.Equal("Buzz", fizzBuzz.Execute(20));
+	}
 }
