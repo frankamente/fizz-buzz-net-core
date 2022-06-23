@@ -12,4 +12,14 @@ public class FizzBuzzShould
 		Assert.Equal("2", fizzBuzz.Execute(2));
 		Assert.Equal("4", fizzBuzz.Execute(4));
 	}
+
+	[Fact]
+	public void FizzBuzz_InputIsMultipleOf3_ReturnFizz()
+	{
+		var fizzBuzz = new FizzBuzz();
+
+		Assert.Equal("Fizz", fizzBuzz.Execute(3));
+		Assert.Equal("Fizz", fizzBuzz.Execute(6));
+		Assert.Equal("Fizz", fizzBuzz.Execute(9));
+	}
 }
