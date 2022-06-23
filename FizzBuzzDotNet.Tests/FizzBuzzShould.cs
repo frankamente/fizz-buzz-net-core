@@ -18,9 +18,9 @@ public class FizzBuzzShould
 	{
 		var fizzBuzz = new FizzBuzz();
 
-		Assert.Equal("Fizz", fizzBuzz.Execute(3));
-		Assert.Equal("Fizz", fizzBuzz.Execute(6));
-		Assert.Equal("Fizz", fizzBuzz.Execute(9));
+		Assert.Equal(FizzBuzz.FIZZ, fizzBuzz.Execute(3));
+		Assert.Equal(FizzBuzz.FIZZ, fizzBuzz.Execute(6));
+		Assert.Equal(FizzBuzz.FIZZ, fizzBuzz.Execute(9));
 	}
 
 	[Fact]
@@ -28,8 +28,18 @@ public class FizzBuzzShould
 	{
 		var fizzBuzz = new FizzBuzz();
 
-		Assert.Equal("Buzz", fizzBuzz.Execute(5));
-		Assert.Equal("Buzz", fizzBuzz.Execute(10));
-		Assert.Equal("Buzz", fizzBuzz.Execute(20));
+		Assert.Equal(FizzBuzz.BUZZ, fizzBuzz.Execute(5));
+		Assert.Equal(FizzBuzz.BUZZ, fizzBuzz.Execute(10));
+		Assert.Equal(FizzBuzz.BUZZ, fizzBuzz.Execute(20));
+	}
+
+	[Fact]
+	public void FizzBuzz_InputIsMultipleOf3And5_ReturnFizzBuzz()
+	{
+		var fizzBuzz = new FizzBuzz();
+
+		Assert.Equal(FizzBuzz.FIZZ_BUZZ, fizzBuzz.Execute(15));
+		Assert.Equal(FizzBuzz.FIZZ_BUZZ, fizzBuzz.Execute(30));
+		Assert.Equal(FizzBuzz.FIZZ_BUZZ, fizzBuzz.Execute(45));
 	}
 }
